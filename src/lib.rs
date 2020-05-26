@@ -1,7 +1,7 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+struct Bucket<K, V> {
+    items: Vec<(K, V)>,
+}
+
+pub struct HashMap<K, V> {
+    bucket: Vec<Bucket<K, V>>,
 }
